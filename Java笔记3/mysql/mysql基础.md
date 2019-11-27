@@ -4,7 +4,7 @@
 表格中格式为Timestamp格式时，不给改字段赋值或者为null时，默认使用当前时间为该字段赋值
 
 
-TRUNCATE table 表名:删除表中所有记录速率最快
+TRUNCATE table 表名:删除表中所有记录速率最快 
 
 
 
