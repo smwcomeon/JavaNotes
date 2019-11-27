@@ -1,6 +1,7 @@
 ### 解决mysql字段大小写不敏感问题
 ```xml
   select * from t_ucp_servicetype where servicetypeid  binary regexp '^[A-Z]'
+```
 
 ### JDBC出现The server time zone value 'ÖÐ¹ú±ê×¼Ê±¼ä' is unrec问题
 ```word
@@ -14,3 +15,18 @@ default-time-zone=’+08:00’
 然后记得重启MySQL的服务，打开cmd窗口登录MySQL执行show variables like ‘%time_zone%’;这句命令
 2.直接在mysql执行语句:
 set global time_zone='+8:00'
+```
+### 查询库中是否存在某张表
+``` xml
+<select id="selectTableByNameList" resultType="java.lang.String" parameterType="java.util.List">
+         SELECT table_name FROM information_schema.TABLES WHERE table_name in
+           <foreach collection="list"  item="ids" open="(" separator="," close=")"  >
+              #{ids}
+           </foreach>
+ </select>
+```
+查询某个数据库中是否存在某张表
+```xml
+*SHOW TABLES LIKE '%tb_bp_d_case%';
+*select TABLE_NAME from INFORMATION_SCHEMA.TABLES where TABLE_SCHEMA='dbname' and TABLE_NAME='tablename' ;
+```
