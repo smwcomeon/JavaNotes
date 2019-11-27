@@ -1,4 +1,4 @@
-![create](https://github.com/smwcomeon/notes/Java笔记3/mysql/images/操作表.jpg)
+![create](https://github.com/smwcomeon/notes/edit/master/Java笔记3/mysql/images/操作表.jpg)
 
 
 表格中格式为Timestamp格式时，不给改字段赋值或者为null时，默认使用当前时间为该字段赋值
