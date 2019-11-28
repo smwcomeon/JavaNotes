@@ -12,23 +12,23 @@
 
 1.获取成员变量们
 
-	 Field	getField(String name) 
+	Field	getField(String name) 
 		          返回一个 Field 对象，它反映此 Class 对象所表示的类或接口的指定公共成员字段。
-	 Field[]	getFields() 
+	Field[]	getFields() 
 		          返回一个包含某些 Field 对象的数组，这些对象反映此 Class 对象所表示的类或接口的所有可访问公共字段。
 	Field	getDeclaredField(String name) 
 		          返回一个 Field 对象，该对象反映此 Class 对象所表示的类或接口的指定已声明字段。
-	 Field[]	getDeclaredFields() 
+	Field[]	getDeclaredFields() 
 		          返回 Field 对象的一个数组，这些对象反映此 Class 对象所表示的类或接口所声明的所有字段。
 2.获取构造方法们
 
 	Constructor<T>	getConstructor(Class<?>... parameterTypes) 
 		          返回一个 Constructor 对象，它反映此 Class 对象所表示的类的指定公共构造方法。
-	 Constructor<?>[]	getConstructors() 
+	Constructor<?>[]	getConstructors() 
 		          返回一个包含某些 Constructor 对象的数组，这些对象反映此 Class 对象所表示的类的所有公共构造方法。
 	Constructor<T>	getDeclaredConstructor(Class<?>... parameterTypes) 
 		          返回一个 Constructor 对象，该对象反映此 Class 对象所表示的类或接口的指定构造方法。
-	 Constructor<?>[]	getDeclaredConstructors() 
+	Constructor<?>[]	getDeclaredConstructors() 
 		          返回 Constructor 对象的一个数组，这些对象反映此 Class 对象表示的类声明的所有构造方法。
 	
 3.获取成员方法们
@@ -123,7 +123,6 @@ field字段例子：
 	}
 ```
 ****
-
 ```java
 	package reflect;
 	
