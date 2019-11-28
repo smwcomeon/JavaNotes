@@ -210,25 +210,29 @@ Static
 	
 
 Thread
-	创建方式一：
-	此方法是实现Runnable，避免只能继承Thread一个类，可以变相的继承另一个类
-	 `Runnable runnable = new Runnable() {
-	            @Override
-	            public void run() {
-	                for (int i = 0; i < 20; i++) {
-	                    System.out.println(Thread.currentThread().getName());
-	                }
-	            }
-	        };
-	 new Thread(runnable).start();`
-	创建方式二：
-	`new Thread(){
+  创建方式一：
+		此方法是实现Runnable，避免只能继承Thread一个类，可以变相的继承另一个类
+		
+		```word
+		 Runnable runnable = new Runnable() {
+			    @Override
+			    public void run() {
+				for (int i = 0; i < 20; i++) {
+				    System.out.println(Thread.currentThread().getName());
+				}
+			    }
+			};
+		 new Thread(runnable).start();
+		 ```
+  创建方式二：
+       
+	new Thread(){
 	            @Override
 	            public void run() {
 	                super.run();
 	            }
-	  }.start();`
-	枷锁方式：
+	  }.start();
+  枷锁方式：
 		`//创建一个锁对象
 		    Object obj =new Object();
 		//加锁
@@ -243,9 +247,8 @@ Thread
 		        System.out.println(Thread.currentThread().getName()+"第"+ticket+"张票出售中。。。。。");
 		            ticket --;
 		 }`
-	Lock锁：
-		提供了比synchronied代码块和synchronized方法更广泛的操作
-		同步代码块/同步方法具有的功能Lock都有，除此之外，更面体现面向对象
+  Lock锁：
+	提供了比synchronied代码块和synchronized方法更广泛的操作同步代码块/同步方法具有的功能Lock都有，除此之外，更面体现面向对象
 		Lock锁也称为同步锁，加锁和释放锁的方法：
 			public void  lock（）：加同步锁
 			public void  unlock（）：释放同步锁
@@ -257,16 +260,20 @@ Thread
 		通常情况下，unlock（）方法一般与try..catch..finally代块连用
 	
 	
-进入到timeWaiting（计时等待）有两种方式
-1、使用sleep(long time)方法，在毫秒值结束之后，线程进入Runnable/Blocked状态
-2、使用wait(long time)方法，如果毫秒值结束之后，还没有被notify唤醒,就会自动醒来，线程进入Runnable/Blocked状态
-3、使用wait()方法，等待被notify唤醒
+进入到timeWaiting（计时等待）有两种方式：
+
+	1、使用sleep(long time)方法，在毫秒值结束之后，线程进入Runnable/Blocked状态
+	2、使用wait(long time)方法，如果毫秒值结束之后，还没有被notify唤醒,就会自动醒来，线程进入Runnable/Blocked状态
+	3、使用wait()方法，等待被notify唤醒
+
 唤醒方法：
+
 	notify() 唤醒此对象监视器上等待的某个线程
 	notifyAll() 唤醒此对象监视器上等待的所有线程
 	
 Executors：线程的工厂类，用来生成线程池
 Executor类中的静态方法：
+
 	static ExecutorService newFixedThreadPool(int nThread)创建一个可重复使用固定线程数的线程池，
 	用来从线程池中获取线程，调用start方法，执行线程任务
 	submit(Runnable task)提交一个Runnable任务用于执行
@@ -274,6 +281,7 @@ Executor类中的静态方法：
 		void shutdown()
 
 File：
+
 	static String pathSeparator 与系统有关的路径分隔符，
 	 static String separator 与系统有关的默认名称分隔符，
 	//与系统有关的路径分隔符 ,
@@ -285,32 +293,42 @@ File：
 	System.out.println(separator);
 
 File（String parent,String child）根据parent路径名称字符串和child路径名称拼接成一个新的File实例
+
 	File file = new File("D:\\Git");
 	 File file1 = new File("D:\\Git", "CGB-JT-SYS-V1.01");
-
-	获取功能的方法：
+   
+   获取功能的方法：
+  
 		getAbsolutePath():返回File的绝对路径名字符串
 		getPath(): 将File转换为路径名字符串
 		getName()：返回File表示的文件或目录的名称
 		length():返回File表示的文件的长度
-	判断动能的方法：
+		
+   判断动能的方法：
+   
 		exists()：File表示的文件或目录是否实际存在。
 		isDirectory()：判断是否是目录
 		isFile()：判断是否为文件
-	File类创建删除功能
+   File类创建删除功能
+   
 		createNewFile() ：当文件不存时，创建一个空的文件
 		delete() 删除此File表示的文件或目录
 		mkdir() 创建由File表示的目录
 		mkdirs() 创建由此File表示的目录
-	File类遍历（文件夹）目录功能
+		
+   File类遍历（文件夹）目录功能
+   
 		public String[] list() ：返回一个String数组，表示File目录中的所有子文件或目录。
 		public File[] listFiles() ：返回一个File数组，表示File目录中的所有子文件或目录
 		list返回的文件名
 		listFile返回的File对象，是文件的绝对路径
-	fileList（FileFilter filter）
+		   
+   fileList（FileFilter filter）
+	
 		FileFilter接口，用于抽象路径（File 对象的过滤器）的过滤
-		抽象方法：
+   抽象方法：
 		boolean accept(File pathName)测试指定抽象路径名是否包含在某个路径列表下
+		
 		private static void getFilesFilter(File dir) {
 		        //添加文件过滤方法
 		        File[] files = dir.listFiles(new FileFilter() {
@@ -333,14 +351,16 @@ File（String parent,String child）根据parent路径名称字符串和child路
 
 	
 	
-字节流
+**字节流**
 FileInputStream
 构造方法摘要 
+
 	FileInputStream(File file) 
 	          通过打开一个到实际文件的连接来创建一个 FileInputStream，该文件通过文件系统中的 File 对象 file 指定。 
 	FileInputStream(String name) 
 	          通过打开一个到实际文件的连接来创建一个 FileInputStream，该文件通过文件系统中的路径名 name 指定。
 方法摘要 
+
 	 int read() 
 	          从此输入流中读取一个数据字节。 
 	 int read(byte[] b) 
@@ -349,6 +369,7 @@ FileInputStream
 	          从此输入流中将最多 len 个字节的数据读入一个 byte 数组中。 
 	
 FileOutputStream
+
 	FileOutputStream(String name,boolean append),
 	FileOutputStream(File file',boolean append),
 	参数：
@@ -383,12 +404,14 @@ FileOutputStream
 		fos.close();
 		fis.close();
 
-字符流
+**字符流**
+
 	单使用字节流读取文件时，可能会有一个小问题，就是遇到中文时，可能不会显示完整的字符，那是因为一个中文字占用多个字节存储，所以java提供一些字符流类，以字符为单位专门提供文件文本。
 	gbk 一个中文字占用两个字节
 	utf8 一个中文字占用三个字节
 	
 FileReader
+
 	构造方法摘要 
 		FileReader(File file) 
 		          在给定从中读取数据的 File 的情况下创建一个新 FileReader。
@@ -397,7 +420,8 @@ FileReader
 	int read() 读取单个字符并返回
 	int read(char[] cbuf) 一次性读取多个字符，并将字符读入到数组中
 FileWriter
-构造方法摘要 
+
+	构造方法摘要 
 	FileWriter(File file) 
 	          根据给定的 File 对象构造一个 FileWriter 对象。 
 	FileWriter(File file, boolean append) 
@@ -408,6 +432,7 @@ FileWriter
 	          根据给定的文件名以及指示是否附加写入数据的 boolean 值来构造 FileWriter 对象。 
 	
 BufferedWriter
+
 	java.lang.Object
 	  继承者 java.io.Writer
 	      继承者 java.io.BufferedWriter
@@ -425,26 +450,28 @@ BufferedWriter
 		 void write(int c)  写入单个字符。 
 		 void write(String s, int off, int len)   写入字符串的某一部分。 
 	
-BufferedReader：从字符输入流中读取文本，缓冲各个字符，从而实现字符、数组和行的高效读取。 
+BufferedReader：从字符输入流中读取文本，缓冲各个字符，从而实现字符、数组和行的高效读取。
+
 	java.lang.Object
 	  继承者 java.io.Reader
 	      继承者 java.io.BufferedReader
 	
 	通常，Reader 所作的每个读取请求都会导致对底层字符或字节流进行相应的读取请求。因此，建议用 BufferedReader 包装所有其 read() 操作可能开销很高的 Reader（如 FileReader 和 InputStreamReader）。例如， 
 	 BufferedReader in
-   = new BufferedReader(new FileReader("foo.in"));
+    = new BufferedReader(new FileReader("foo.in"));
 	将缓冲指定文件的输入。如果没有缓冲，则每次调用 read() 或 readLine() 都会导致从文件中读取字节，并将其转换为字符后返回，而这是极其低效的。 
 	通过用合适的 BufferedReader 替代每个 DataInputStream，可以对将 DataInputStream 用于文字输入的程序进行本地化。 
-构造方法摘要 
-	BufferedReader(Reader in) 
-	          创建一个使用默认大小输入缓冲区的缓冲字符输入流。 
-	BufferedReader(Reader in, int sz) 
-	          创建一个使用指定大小输入缓冲区的缓冲字符输入流。 
-方法摘要 ：
-	String readLine() 
-	          读取一个文本行。 
+	构造方法摘要 
+		BufferedReader(Reader in) 
+			  创建一个使用默认大小输入缓冲区的缓冲字符输入流。 
+		BufferedReader(Reader in, int sz) 
+			  创建一个使用指定大小输入缓冲区的缓冲字符输入流。 
+	方法摘要 ：
+		String readLine() 
+			  读取一个文本行。 
 字符流通向字节流
-OutputStreamWriter：是字符流通向字节流的桥梁：可使用指定的 charset 将要写入流中的字符编码成字节。它使用的字符集可以由名称指定或显式给定，否则将接受平台默认的字符集。
+
+	OutputStreamWriter：是字符流通向字节流的桥梁：可使用指定的 charset 将要写入流中的字符编码成字节。它使用的字符集可以由名称指定或显式给定，否则将接受平台默认的字符集。
 	构造方法摘要 
 		OutputStreamWriter(OutputStream out) 
 		          创建使用默认字符编码的 OutputStreamWriter。 
@@ -462,7 +489,8 @@ OutputStreamWriter：是字符流通向字节流的桥梁：可使用指定的 c
 		 void write(String str, int off, int len) 
 		          写入字符串的某一部分。 
 字节流通向字符流
-InputStreamReader:是字节流通向字符流的桥梁：它使用指定的 charset 读取字节并将其解码为字符。它使用的字符集可以由名称指定或显式给定，或者可以接受平台默认的字符集
+
+	InputStreamReader:是字节流通向字符流的桥梁：它使用指定的 charset 读取字节并将其解码为字符。它使用的字符集可以由名称指定或显式给定，或者可以接受平台默认的字符集
 	构造方法：
 		InputStreamReader(InputStream in) 
 		          创建一个使用默认字符集的 InputStreamReader。
@@ -485,12 +513,14 @@ InputStreamReader:是字节流通向字符流的桥梁：它使用指定的 char
 		isr.close();
 	
 对象的序列化和反序列化
-ObjectOutputStream:对象序列化
+
+	ObjectOutputStream:对象序列化
 	构造方法：
 	ObjectOutputStream（OutputStream out）创建写入指定的stream
 	特有的成员方法:
 		void writeObject（Object ojb）将指定的对象写入ObjectOutputStream
-ObjectInputStream：对象反序列化
+		
+	** ObjectInputStream：对象反序列化**
 	ObjectInputStream(InputStream in )创建指定的InputStream读取文件
 	特有方法：
 		void readObject（Object ojb）从ObjectInputStream读取
@@ -511,6 +541,7 @@ ObjectInputStream：对象反序列化
 	System.out.println(((Person)o));
 	
 PrintStream
+
 	为其他输出流添加了功能
 	特点：
 		1、只负责数据的输出，不负责数据的读取
