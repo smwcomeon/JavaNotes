@@ -1,4 +1,5 @@
 **JSON**
+	```
 	- JSON就是一种数据交换的格式
 	- JSON就是一个字符串，通过JSON可以表示不同的语言的对象，并且该字符串可以转换为不同语言中的对象
 	- JavaScript Object Notation（JavaScript对象表示法）	
@@ -7,7 +8,8 @@
 		2.JSON中的属性名必须使用双引号引起来
 	- JSON的两种格式
 		JSON对象 {}
-		JSON数组 []	
+		JSON数组 []
+	```	
 	- JSON中可以保存的数据的类型   
 		>>Number 数值
 		>>String 字符串
