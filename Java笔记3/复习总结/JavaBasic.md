@@ -12,25 +12,25 @@ ASCII码：American Standard Code Information Interchange 美国信息交换标�
 
 
 break 关键字的用法常见的有两种：
-```
+
 	1.可以再switch语句当中,一旦执行，整个switch语句立刻结束
 	2.在循环中，一单执行，整个循环语句立刻结束，打断循环
-```
+
 continue关键字：
-	```
+	
 	一旦执行，立刻跳出当前次循环剩下的内容，马上开始下一次循环
-	```
+	
 	
 switch语句使用的注意事项：
 
-	```
+	
 	1.多个case后面的值不可以重复
 	2.switch后面的小括号当中只能是下列数据类型
 		基本类型：byte、int、short、char
 		引用数据类型：String字符串、enum枚举
 	3.switch语句格式可以很灵活：前后顺序可以颠倒，而且break语句可以省略。
 	当当前case语句后边没有break时，会直接执行下一个case，并且不管case的执行条件，直接穿透，直至碰到break语句跳出。
-	```
+	
 函数方法的注意事项：
 
 	```
@@ -101,7 +101,6 @@ ArrayList
 	ArrayList只能存储引用类，如果要使用基本数据类型，必须使用基本类型的“包装类”
 String字符串的特点：
 
-	```
 	1、字符串内容永不可变
 	2、正因为不可变，所以字符串是可以共享的
 	3、字符串效果上相当于char[]字符数组，但底层原理是byte[]字符数组
@@ -109,59 +108,53 @@ String字符串的特点：
 	public String(),创建一个空白的字符串，不含任何内容
 	public String(char[] array)，根据字符数组的内容，创建对应的字符串
 	public String(byte[] array),根据字符数组的内容，来创建对应的字符串
-	```
+	
 字符串常量池，程序当中直接写上的双引号，就在字符串常量池中
 
-	```
 	对于基本类型来说，==是进行数值的比较，
 	对于引用类型来说，==是进行【地址值】的比较
 	public int length(),获取字符串当中含有的字符个数，拿到字符串长度
 	public String concat()，拼接字符串
 	public int indexOf()，查找字符串中首次出现字符的索引位置
 	public char charAt(int index),获取指定索引位置的字符
-	```
+	
 	
 stattic 
 
-	```
 	static修饰成员方法，就成为静态方法，属于类，
 	静态不能直接访问非静态内容，因为在内存当中先有静态内容，后有非静态内容
 	static修饰的静态代码块内容：
 		当第一次使用本类时,静态代码块执行唯一一次
 		静态内容优先非静态，所以静态代码块比构造方法先执行
 	静态代码块可以用来一次性对静态成员变量进行赋值
-	```
+	
 Arrays:
 
-	```
+	
 	public static String toString(数组),将参数数组变成字符串
 	public static void sort（数组）,对数组元素进行排序
-	```
+	
 	
 Math:java.util.Math
 
-	```
 	public static double abs(double num),取绝对值，有多种重载
 	public static double ceil(double num),向上取整
 	public static double floor(double num),向下取整
 	public static double round(double num),向上取整
-	```
 	
 在继承关系中，创建子类对象，访问成员方法的规则：
 
-	```
 	创建的对象是谁，就优先用谁，如果没有则向上找，
 	局部变量：直接写变量名
 	本类的成员变量：this.成员变量名
 	父类的成员变量:super.成员变量
-	```
+	
 继承关系：
 
-	```
 	1、子类构造方法当中有一个默认的super()调用，所以先调用父类构造，后执行子类构造
 	2、子类构造可以通过super关键字来调用父类重载构造
 	子类必须调用父类构造方法，不写则赠送，写了则按指定的super调用，super只能有一个，而且必须第一个。
-	```
+	
 抽象方法：
 
 	抽象方法：就是加上abstract关键字，然后去掉大括号，直接分号结束
