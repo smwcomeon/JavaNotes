@@ -69,7 +69,7 @@ Method：方法对象
 		          对带有指定参数的指定对象调用由此 Method 对象表示的底层方法。
 	
 field字段例子：
-
+```java
 	person.java
 	package reflect;
 	
@@ -121,7 +121,7 @@ field字段例子：
 	    }
 	
 	}
-
+	***
 	package reflect;
 	
 	import java.lang.reflect.Constructor;
@@ -189,8 +189,10 @@ field字段例子：
 	        System.out.println(o3);
 	    }
 	}
+```
+	
 method例子：
-
+```java
 	package reflect;
 	
 	import java.lang.reflect.Method;
@@ -216,9 +218,10 @@ method例子：
 	
 	    }
 	}
+```
 
 修改配置文件：
-
+```java
 	pro.properties
 	className=reflect.Person
 	methodName=eat
@@ -260,6 +263,5 @@ method例子：
 	
 	    }
 	}
-
-
+```
 
