@@ -121,7 +121,9 @@ field字段例子：
 	    }
 	
 	}
+```
 	***
+```java
 	package reflect;
 	
 	import java.lang.reflect.Constructor;
@@ -221,6 +223,7 @@ method例子：
 ```
 
 修改配置文件：
+
 ```java
 	pro.properties
 	className=reflect.Person
