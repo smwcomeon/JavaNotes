@@ -1,4 +1,5 @@
 获取Class对象的方式：
+
 	1.Class.forName("全类名")，将字节码文件加载进内存，返回Class对象
 		*多用于配置文件，将类名定义在配置文件中，读取文件，加载类
 	2.类名.Class:通过类名属性Class获取
@@ -8,7 +9,9 @@
 	同一个字节码文件（*.class）在一次程序运行过程只会被加载一次
 	
 获取类对象之后的功能:
+
 1.获取成员变量们
+
 	 Field	getField(String name) 
 		          返回一个 Field 对象，它反映此 Class 对象所表示的类或接口的指定公共成员字段。
 	 Field[]	getFields() 
@@ -18,6 +21,7 @@
 	 Field[]	getDeclaredFields() 
 		          返回 Field 对象的一个数组，这些对象反映此 Class 对象所表示的类或接口所声明的所有字段。
 2.获取构造方法们
+
 	Constructor<T>	getConstructor(Class<?>... parameterTypes) 
 		          返回一个 Constructor 对象，它反映此 Class 对象所表示的类的指定公共构造方法。
 	 Constructor<?>[]	getConstructors() 
@@ -28,6 +32,7 @@
 		          返回 Constructor 对象的一个数组，这些对象反映此 Class 对象表示的类声明的所有构造方法。
 	
 3.获取成员方法们
+
 	 Method	getMethod(String name, Class<?>... parameterTypes) 
 		          返回一个 Method 对象，它反映此 Class 对象所表示的类或接口的指定公共成员方法。
 	 Method[]	getMethods() 
@@ -41,6 +46,7 @@
 	String getName()
 	
 Field:成员变量的操作
+
 	1.获取对象的成员变量的值
 	 Object	get(Object obj) 
 		          返回指定对象上此 Field 表示的字段的值。
@@ -51,16 +57,19 @@ Field:成员变量的操作
 		setAccessible(true)
 		
 Constructor：构造方法
+
 	创建对象:
 	T newInstance(Object... initargs)
 	如果使用空参数构造方法创建对象，操作可以简化：Class对象newInstance方法
 
 Method：方法对象
+
 	执行方法
 	 Object	invoke(Object obj, Object... args) 
 		          对带有指定参数的指定对象调用由此 Method 对象表示的底层方法。
 	
 field字段例子：
+
 	person.java
 	package reflect;
 	
@@ -181,6 +190,7 @@ field字段例子：
 	    }
 	}
 method例子：
+
 	package reflect;
 	
 	import java.lang.reflect.Method;
@@ -208,6 +218,7 @@ method例子：
 	}
 
 修改配置文件：
+
 	pro.properties
 	className=reflect.Person
 	methodName=eat
