@@ -1,5 +1,5 @@
 **JSON**
-	```
+
 	- JSON就是一种数据交换的格式
 	- JSON就是一个字符串，通过JSON可以表示不同的语言的对象，并且该字符串可以转换为不同语言中的对象
 	- JavaScript Object Notation（JavaScript对象表示法）	
@@ -9,7 +9,7 @@
 	- JSON的两种格式
 		JSON对象 {}
 		JSON数组 []
-	```	
+		
 	- JSON中可以保存的数据的类型   
 		>>Number 数值
 		>>String 字符串
@@ -18,9 +18,10 @@
 		>>Object 对象
 		>>Array 数组
 		
-	
-		`{"name":"孙悟空","age":18,"gender":"男"}`
-		`[123,true,"hello"]`
+		```xml
+		{"name":"孙悟空","age":18,"gender":"男"}
+		[123,true,"hello"]
+		```
 
 **HTML中的json格式：**
 
