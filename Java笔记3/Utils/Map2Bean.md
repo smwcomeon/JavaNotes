@@ -1,6 +1,6 @@
 ### java bean与map互相转换
 
-** 将bean转换为map：**
+**将bean转换为map：**
 
 ```java
 /**
@@ -31,7 +31,7 @@
   }
 ```
 
-** 将map转换为bean：**
+**将map转换为bean：**
 ```java
 /**
    * map转bean
