@@ -60,7 +60,7 @@ switch语句使用的注意事项：
 	2、成员方法不能写static关键字
 	```
 局部变量和成员变量的区别：
-```
+	```
 	1、定义位置不一样
 		局部变量：在方法内部定义
 		成员变量：在方法外部定义，在类当中
@@ -76,23 +76,24 @@ switch语句使用的注意事项：
 	5、声明周期不一样：
 		局部变量：随方法进栈而诞生，随方法出栈而消失
 		成员变量：随对象创建而诞生，随对象被垃圾回收而消失
-```
+	```
 类构造方法注意事项：
-```
+	```
 	1、没有写构造方法时，会有一个默认无参构造
 	2、一旦编写了至少一个构造方法，那么将没有默认无参构造。
-```
+	```
 		
 对于基本类型当中的boolean值，Getter方法一定要写成isXxx的形式，setXxx不变
 this关键字：
+	```
 	当方法的局部变量和类的成员变量重名的时候，根据“就近原则”，优先使用局部变量，如果需要访问本类当中的成员变量，需要使用格式：this.成员变量名
-
 	通过谁调用的方法，谁就是this
+	```
 	
 ArrayList
 	ArrayList只能存储引用类，如果要使用基本数据类型，必须使用基本类型的“包装类”
 String字符串的特点：
-	
+	```
 	1、字符串内容永不可变
 	2、正因为不可变，所以字符串是可以共享的
 	3、字符串效果上相当于char[]字符数组，但底层原理是byte[]字符数组
@@ -100,44 +101,60 @@ String字符串的特点：
 	public String(),创建一个空白的字符串，不含任何内容
 	public String(char[] array)，根据字符数组的内容，创建对应的字符串
 	public String(byte[] array),根据字符数组的内容，来创建对应的字符串
+	```
 字符串常量池，程序当中直接写上的双引号，就在字符串常量池中
+	```
 	对于基本类型来说，==是进行数值的比较，
 	对于引用类型来说，==是进行【地址值】的比较
 	public int length(),获取字符串当中含有的字符个数，拿到字符串长度
 	public String concat()，拼接字符串
 	public int indexOf()，查找字符串中首次出现字符的索引位置
 	public char charAt(int index),获取指定索引位置的字符
+	```
+	
 stattic 
+	```
 	static修饰成员方法，就成为静态方法，属于类，
 	静态不能直接访问非静态内容，因为在内存当中先有静态内容，后有非静态内容
 	static修饰的静态代码块内容：
 		当第一次使用本类时,静态代码块执行唯一一次
 		静态内容优先非静态，所以静态代码块比构造方法先执行
 	静态代码块可以用来一次性对静态成员变量进行赋值
+	```
 Arrays:
+	```
 	public static String toString(数组),将参数数组变成字符串
 	public static void sort（数组）,对数组元素进行排序
+	```
 	
 Math:java.util.Math
+	```
 	public static double abs(double num),取绝对值，有多种重载
 	public static double ceil(double num),向上取整
 	public static double floor(double num),向下取整
 	public static double round(double num),向上取整
+	```
 	
 在继承关系中，创建子类对象，访问成员方法的规则：
+	```
 	创建的对象是谁，就优先用谁，如果没有则向上找，
 	局部变量：直接写变量名
 	本类的成员变量：this.成员变量名
 	父类的成员变量:super.成员变量
+	```
 继承关系：
+	```
 	1、子类构造方法当中有一个默认的super()调用，所以先调用父类构造，后执行子类构造
 	2、子类构造可以通过super关键字来调用父类重载构造
 	子类必须调用父类构造方法，不写则赠送，写了则按指定的super调用，super只能有一个，而且必须第一个。
+	```
 抽象方法：
+
 	抽象方法：就是加上abstract关键字，然后去掉大括号，直接分号结束
 	抽象类：抽象方法所在的类必须是抽象类，在class之前写上abstarct
 
 接口：
+	
 	java7，接口中可以可以包含的内容：
 		1、常量
 		2、抽象方法
@@ -146,7 +163,9 @@ Math:java.util.Math
 		2、静态方法
 	java9 还可以额外包含：
 		1、私有方法
+		
 在任何版本的java中，接口都能定义抽象方法
+```
 格式：public abstarct 返回值类型 方法名称（参数列表）；
 注意事项：1、接口当中的抽象方法，修饰符必须是两个固定的关键字：public abstarct 
 		2、两个关键字修饰符可以省略
@@ -163,10 +182,12 @@ java9开始，接口当中允许定义私有方法
 接口中可以定义成员变量，但是必须使用public static final三个关键字修饰
 格式：public static final 数据类型 常量名称 = 数据值
 注意：必须赋值，public static final可以省略，成员变量不可变
+```
 	
 
 
 Static
+	```
 	特点：当第一次使用到本类时，静态代码执行唯一的一次。静态内容总是优于非静态，所有静态代码比构造方法先执行，
 	抽象方法：就是在abstarct关键字，然后去掉大括号，以分号结尾，
 	public abstarct class Animal{
@@ -176,22 +197,20 @@ Static
 	        public void normalMethod(){
 	        } 
 	}
-	
+	```
 Math类中常用的方法：
 	 * public static double abs(double num ): 获取绝对值
 	 * public static double ceil（double num） 向上取整
 	 * public static double floor（double num） ：向下取整
 	 * public static long round(double num) :四舍五入
 泛型：
-	
-
 	不写泛型默认是object类型
 	
 
 Thread
 	创建方式一：
 	此方法是实现Runnable，避免只能继承Thread一个类，可以变相的继承另一个类
-	 Runnable runnable = new Runnable() {
+	 `Runnable runnable = new Runnable() {
 	            @Override
 	            public void run() {
 	                for (int i = 0; i < 20; i++) {
@@ -199,16 +218,16 @@ Thread
 	                }
 	            }
 	        };
-	 new Thread(runnable).start();
+	 new Thread(runnable).start();`
 	创建方式二：
-	new Thread(){
+	`new Thread(){
 	            @Override
 	            public void run() {
 	                super.run();
 	            }
-	  }.start();
+	  }.start();`
 	枷锁方式：
-		//创建一个锁对象
+		`//创建一个锁对象
 		    Object obj =new Object();
 		//加锁
 		 synchronized (obj){
@@ -221,7 +240,7 @@ Thread
 		                }
 		        System.out.println(Thread.currentThread().getName()+"第"+ticket+"张票出售中。。。。。");
 		            ticket --;
-		 }
+		 }`
 	Lock锁：
 		提供了比synchronied代码块和synchronized方法更广泛的操作
 		同步代码块/同步方法具有的功能Lock都有，除此之外，更面体现面向对象
