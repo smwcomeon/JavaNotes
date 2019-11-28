@@ -233,6 +233,7 @@ Thread
 	            }
 	  }.start();
   枷锁方式：
+  
 		`//创建一个锁对象
 		    Object obj =new Object();
 		//加锁
@@ -247,7 +248,9 @@ Thread
 		        System.out.println(Thread.currentThread().getName()+"第"+ticket+"张票出售中。。。。。");
 		            ticket --;
 		 }`
+		 
   Lock锁：
+  
 	提供了比synchronied代码块和synchronized方法更广泛的操作同步代码块/同步方法具有的功能Lock都有，除此之外，更面体现面向对象
 		Lock锁也称为同步锁，加锁和释放锁的方法：
 			public void  lock（）：加同步锁
@@ -258,8 +261,6 @@ Thread
 			        lock.lock();    //加锁
 			        lock.unlock();  //释放锁
 		通常情况下，unlock（）方法一般与try..catch..finally代块连用
-	
-	
 进入到timeWaiting（计时等待）有两种方式：
 
 	1、使用sleep(long time)方法，在毫秒值结束之后，线程进入Runnable/Blocked状态
