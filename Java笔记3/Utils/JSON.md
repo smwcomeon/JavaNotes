@@ -54,7 +54,7 @@
 </body>
 </html>
 ```
-**JAVA中的JSON格式：
+**JAVA中的JSON格式一**
 ```java
 package com.admin.json;
 
@@ -79,4 +79,24 @@ public class JSONTest {
         System.out.println("json:"+json);
     }
 }
+```
+**JAVA中的JSON格式二**
+```java
+@Test
+	public void javaToJson() throws IOException{
+		ObjectMapper objectMapper = new ObjectMapper();
+		User user=new User();
+		user.setId(1);
+		user.setName("tomcat");
+		user.setAge(10);
+		
+		//将对象转化为JSON串
+		String userJSON = objectMapper.writeValueAsString(user);
+		System.out.println(userJSON);
+		
+		//将json转化为对象
+		User user1 = objectMapper.readValue(userJSON, User.class);
+		System.out.println(user1);
+	}
+
 ```
