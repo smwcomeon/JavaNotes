@@ -1,5 +1,6 @@
-## Shiro整合的相关步骤
-### 1.1 Shiro的配置类
+> # Shiro整合的相关步骤
+>> ## Shiro相关配置
+>>>### 1.1 Shiro的配置类
 ```java
 package com.qf.config;
 
@@ -105,7 +106,7 @@ public class ShiroConfig {
 
 ```
 
-### 1.2 配置类中所用到的缓存配置文件 **classpath:ehcache.xml**
+>>>### 1.2 配置类中所用到的缓存配置文件 **classpath:ehcache.xml**
     ```xml
     <!--
       ~ Licensed to the Apache Software Foundation (ASF) under one
