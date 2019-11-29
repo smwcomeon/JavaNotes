@@ -264,7 +264,7 @@ public class ShiroUtils {
 }
 
 ```
->> 2.1 Realm的认证与授权
+>> ## 2.1 Realm的认证与授权
 ```java
 package com.qf.realm;
 
@@ -331,7 +331,7 @@ public class UserRealm extends AuthorizingRealm {
 }
 
 ```
->> 3.1 controller层控制
+>> ## 3.1 controller层控制
 ```java
  @RequestMapping("/sys/login")
     @ResponseBody
@@ -351,5 +351,35 @@ public class UserRealm extends AuthorizingRealm {
         //会去调用自定义的realm
         return R.ok();
     }
+
+```
+## Md5Hash密码加密
+```java
+package com.qf.utils;
+
+import org.apache.shiro.crypto.hash.Md5Hash;
+
+public class MD5Utils {
+
+
+    public  static String md5(String source,String salt,int hashIterations){
+        if (source==null){
+            return null;
+        }
+
+        Md5Hash md5Hash = new Md5Hash(source,salt,hashIterations);
+
+        return  md5Hash.toString();
+    }
+
+
+    public static void main(String[] args) {
+        System.out.println(md5("admin","admin",1024));
+
+//        System.out.println(md5("zhangsan","zhangsan",1024));
+
+    }
+
+}
 
 ```
