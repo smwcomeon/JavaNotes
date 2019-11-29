@@ -1,4 +1,5 @@
 **JSON**
+        ```
 	- JSON就是一种数据交换的格式
 	- JSON就是一个字符串，通过JSON可以表示不同的语言的对象，并且该字符串可以转换为不同语言中的对象
 	- JavaScript Object Notation（JavaScript对象表示法）	
@@ -16,7 +17,7 @@
 		>>null 空值
 		>>Object 对象
 		>>Array 数组
-		
+	```	
 		```xml
 		{"name":"孙悟空","age":18,"gender":"男"}
 		[123,true,"hello"]
