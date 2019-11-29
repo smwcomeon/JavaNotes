@@ -1,4 +1,4 @@
-### 导出表格
+### 导出表格业务层
 ```java
  @Override
     public Workbook exportUser() {
@@ -32,6 +32,24 @@
             }
         }
         return workbook;
+    }
+ ```
+ ### 导出表格控制层
+ ```java
+ @RequestMapping("/sys/user/export")
+    public void exportUser(HttpServletResponse response){
+        Workbook workbook = sysUserService.exportUser();
+        try {
+            //设置响应头
+            response.setContentType("application/octet-stream");//所有文件都支持
+            String fileName = "员工信息.xls";
+            fileName = URLEncoder.encode(fileName,"utf-8");
+            response.setHeader("content-disposition","attachment;filename="+fileName);
+            //文件下载
+            workbook.write(response.getOutputStream());
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
  ```
  ***
