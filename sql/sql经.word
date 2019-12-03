@@ -105,3 +105,4 @@ C：full/cross （outer） join：
 
 14.如何修改数据库的名称:
 sp_renamedb 'old_name', 'new_name'
+
