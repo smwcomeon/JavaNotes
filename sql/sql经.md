@@ -1,4 +1,5 @@
 ## sql基础
+
 ![原文地址](https://mp.weixin.qq.com/s?__biz=MzI3ODg2OTY1OQ==&mid=2247486203&idx=1&sn=36acf08f18d88677c775bfa17a7ae01d&chksm=eb51290fdc26a019d88c5566afcb39adb99f64e833a3adefcc911802a92ea59a4114b7934aa9&scene=0&xtrack=1&key=daef0648f7fc3e8cf49405d56a854861fe6a296ee483317d10ee2558a2ee202d31fe1d085777f97609e96de4e6391d913c59f215721113ddf1d453f675e4c6d191b58da568bfb7dd228691f9f221df97&ascene=1&uin=Mjk2MjEwNjIxNw%3D%3D&devicetype=Windows+10&version=62070158&lang=zh_CN&pass_ticket=g%2BjBjY%2F0KHkGlHAJU7ist1bbOBVO8HZKSRoV3s3MQvwEsnmM%2FCaSYvP9MyvWAnBZ)
 
 1、说明：创建数据库
