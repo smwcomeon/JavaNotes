@@ -57,10 +57,20 @@ Field:成员变量的操作
 		setAccessible(true)
 		
 Constructor：构造方法
-
+	
+	1、无参构造
 	创建对象:
 	T newInstance(Object... initargs)
 	如果使用空参数构造方法创建对象，操作可以简化：Class对象newInstance方法
+	2、有参构造
+	```java
+		//获取构造方法
+		Constructor t = c.getConstructor（类型列表）
+		//新建执行，并执行这个构造方法
+		Object obj = t.newInstance(参数类型)
+		
+	```
+	
 
 Method：方法对象
 
