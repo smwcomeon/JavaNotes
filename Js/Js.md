@@ -97,11 +97,11 @@ scheme://host:port/path?query#fragment
    
 　　**2.window.location.protocol　　URL 的协议部分**
  
-　　   返回值：http:
+　　    返回值：http:
  
 　　**3.window.location.host　　URL 的主机部分**
 　　    
-      返回值：www.home.com
+        返回值：www.home.com
 
    **4.window.location.hostname **   
 
@@ -117,7 +117,7 @@ scheme://host:port/path?query#fragment
       返回值：/windows/location/page.html
 
  
-　　**7,window.location.search　　**
+　　**7.window.location.search　　**
   
       查询(参数)部分。除了给动态语言赋值以外，我们同样可以给静态页面,并使用javascript来获得相信应的参数值
 　　  返回值：?ver=1.0&id=timlq
