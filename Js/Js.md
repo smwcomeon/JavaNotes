@@ -90,7 +90,7 @@ scheme://host:port/path?query#fragment
  
 ***http://www.home.com:8080/windows/location/page.html?ver=1.0&id=timlq#love***
 
- 
+ ```text
 　　**1.window.location.href　　整个URl字符串(在浏览器中就是完整的地址栏)**
 
        返回值：http://www.home.com:8080/windows/location/page.html?ver=1.0&id=timlq#love
@@ -126,3 +126,4 @@ scheme://host:port/path?query#fragment
 　　**8.window.location.hash　　锚点**
 
   　　 返回值：#love
+  ```
