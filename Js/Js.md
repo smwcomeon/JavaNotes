@@ -99,9 +99,9 @@ scheme://host:port/path?query#fragment
  
 　　    返回值：http:
  
-　　**3.window.location.host　　URL 的主机部分**
+　　**3.window.location.host　　URL 的主机部分 **
 　　    
-        返回值：www.home.com
+          返回值：www.home.com
 
    **4.window.location.hostname **   
 
