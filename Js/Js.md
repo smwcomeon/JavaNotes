@@ -107,7 +107,7 @@ scheme://host:port/path?query#fragment
 
       返回值：www.home.com:8080
 
-　　**5.window.location.port　　**
+　　**5.window.location.port**
         
       URL 的端口部分。如果采用默认的80端口(update:即使添加了:80)，那么返回值并不是默认的80而是空字符。
 　　   本例返回值:8080
