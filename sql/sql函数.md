@@ -17,13 +17,14 @@ select *,if(sva=1,"男","女") as ssva from taname where sva != ""
 select CASE sva WHEN 1 THEN '男' ELSE '女' END as ssva from taname where sva != ''
 
 ```
-**IFNULL(expr1,expr2)**
+** 2) IFNULL(expr1,expr2)**
 
 ```text
 假如expr1 不为 NULL，则 IFNULL() 的返回值为 expr1; 否则其返回值为 expr2。
 IFNULL()的返回值是数字或是字符串，具体情况取决于其所使用的语境。
 ```
-**IF ELSE 语句**
+**3) IF ELSE 语句**
+语法规则
 ```xml
 if (condition)
 begin
