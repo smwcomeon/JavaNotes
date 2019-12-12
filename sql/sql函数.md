@@ -24,7 +24,8 @@ select CASE sva WHEN 1 THEN '男' ELSE '女' END as ssva from taname where sva !
 IFNULL()的返回值是数字或是字符串，具体情况取决于其所使用的语境。
 ```
 **3) IF ELSE 语句**
-语法规则
+
+语法规则如下：
 ```xml
 if (condition)
 begin
