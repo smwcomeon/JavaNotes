@@ -1,5 +1,5 @@
 * [js中if()条件过滤](#js条件过滤)
-* [window.location相关属性](#window)
+* [window.location相关属性](#window相关方法)
 
 ## js条件过滤
 
@@ -58,8 +58,7 @@
   可以过滤undefined，null，空字符串，0
 ```
 
-## window
-## window.location相关属性
+## window相关方法
 
 window.location方法获取URL
 统一资源定位符 (Uniform Resource Locator, URL)
