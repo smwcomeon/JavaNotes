@@ -1,5 +1,5 @@
-[1. js中if()条件过滤](#1. js中if()条件过滤)
-[2 window.location相关属性](#2 window.location相关属性)
+* [1. js中if()条件过滤](# 1. js中if()条件过滤)
+* [2 window.location相关属性]( # 2 window.location相关属性)
 
 ## 1. js中if()条件过滤
 
