@@ -1,3 +1,4 @@
+top
 * [js中if()条件过滤](#js条件过滤)
 * [window.location相关属性](#window相关方法)
 * [获取url中的参数](#获取url中的参数)
@@ -130,7 +131,7 @@ scheme://host:port/path?query#fragment
 
   　　 返回值：#love
   ```
-## 获取url中的参数
+## 获取url中的参数 * [回顶部](#top)
 
 ```js
  function GetQueryStr(url,name){
