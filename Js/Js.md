@@ -1,8 +1,8 @@
-* [ 1.js中if()条件过滤 ](#1.js中if()条件过滤)
+* [js中if()条件过滤 ](#js中if()条件过滤)
 * [where条件](#where)
-* [2.window.location相关属性](#2.window.location相关属性)
+* [window.location相关属性](#window.location相关属性)
 
-## 1.js中if()条件过滤
+## js中if()条件过滤
 
 *js 中if可以传入非布尔值，可以用来做非空判断，下面测试一下传入哪些值可以视为false*
 
@@ -59,7 +59,7 @@
   可以过滤undefined，null，空字符串，0
 ```
 
-## 2.window.location相关属性
+## window.location相关属性
 
 window.location方法获取URL
 统一资源定位符 (Uniform Resource Locator, URL)
