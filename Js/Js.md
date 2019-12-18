@@ -137,6 +137,7 @@ scheme://host:port/path?query#fragment
     var reg = new RegExp("(^|&)"+name+"=([^&]*(&|$))");
     var str = url.match(reg);
     if(r !=null){
+    //unescape() 函数可对通过 escape() 编码的字符串进行解码
     return unescape(r[s]);
     };
     return null;
