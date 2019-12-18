@@ -1,4 +1,4 @@
-top
+***top***
 * [js中if()条件过滤](#js条件过滤)
 * [window.location相关属性](#window相关方法)
 * [获取url中的参数](#获取url中的参数)
@@ -60,7 +60,7 @@ top
   可以过滤undefined，null，空字符串，0
 ```
 
-## window相关方法
+## window相关方法 [回顶部](#top)
 
 window.location方法获取URL
 统一资源定位符 (Uniform Resource Locator, URL)
@@ -131,7 +131,7 @@ scheme://host:port/path?query#fragment
 
   　　 返回值：#love
   ```
-## 获取url中的参数 * [回顶部](#top)
+## 获取url中的参数 [回顶部](#top)
 
 ```js
  function GetQueryStr(url,name){
