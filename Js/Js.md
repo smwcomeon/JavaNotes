@@ -1,3 +1,6 @@
+[1. js中if()条件过滤](#1. js中if()条件过滤)
+[2 window.location相关属性](#2 window.location相关属性)
+
 ## 1. js中if()条件过滤
 
 *js 中if可以传入非布尔值，可以用来做非空判断，下面测试一下传入哪些值可以视为false*
