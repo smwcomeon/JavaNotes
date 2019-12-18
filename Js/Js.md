@@ -130,6 +130,7 @@ scheme://host:port/path?query#fragment
 
   　　 返回值：#love
   ```
+## 获取url中的参数
 
 ```js
  function GetQueryStr(url,name){
