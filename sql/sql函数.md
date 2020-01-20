@@ -1,3 +1,5 @@
+*[where choose](#choose)
+
 ## 1 **IF**函数
 
 ```text
@@ -39,4 +41,20 @@ else
 begin
 (statement block)
 end
+```
+## choose
+
+```xml
+  <where>
+    <chooose>
+        <when test="serviceTypeId !=null and serviceTypeId !=''">
+           serviceTypeId =#{serviceTypeId}
+         <when>
+         <otherwise>
+           <if test ="value !=null and value !=''">
+             serviceTypeId =#{value}
+            <if>
+          </otherwise>
+     </choose> > 
+   </where>
 ```
