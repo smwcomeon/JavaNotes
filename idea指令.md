@@ -1,3 +1,5 @@
+
+```text
 IntelliJ Idea 常用快捷键列表
 Alt+回车 导入包,自动修正
 Ctrl+N  查找类
@@ -74,3 +76,4 @@ Ctrl+B 快速打开光标处的类或方法
 30.Ctrl＋Alt＋Up /Ctrl＋Alt＋Down可以快速跳转搜索结果
 31.Ctrl＋Shift＋J可以整合两行
 32.Alt＋F8是计算变量值
+```
