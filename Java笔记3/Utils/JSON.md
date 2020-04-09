@@ -101,3 +101,45 @@ public void javaToJson() throws IOException{
 }
 
 ```
+
+### json中包含jsonarray
+```java
+package com.json;
+
+
+import net.sf.json.JSONArray;
+import net.sf.json.JSONObject;
+
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+
+public class JsonJsonArr {
+    public static void main(String[] args) {
+        //json中包含jsonarr格式
+        String value = "{\"data\":[{\"school_name\":\"西北农林科技大学\",\"school_id\":\"8\"},{\"school_name\":\"西北大学\",\"school_id\":\"6\"},{\"school_name\":\"西北工业大学\",\"school_id\":\"5\"},{\"school_name\":\"西北政法大学\",\"school_id\":\"2\"},{\"school_name\":\"西安交通大学\",\"school_id\":\"4\"},{\"school_name\":\"西安建筑科技大学\",\"school_id\":\"10\"},{\"school_name\":\"西安电子科技大学\",\"school_id\":\"3\"},{\"school_name\":\"西安邮电大学\",\"school_id\":\"1\"},{\"school_name\":\"长安大学\",\"school_id\":\"9\"},{\"school_name\":\"陕西师范大学\",\"school_id\":\"7\"},{\"school_name\":\"陕西科技大学\",\"school_id\":\"11\"}],\"msg\":\"列表获取成功\",\"status\":0}";
+        //net.sf.json包下的JSONObject
+        JSONObject jsonObject = new JSONObject();
+        //str转为json格式
+        JSONObject jsonObject1 = jsonObject.fromObject(value);
+
+        //获取jsonarr对象
+        Object data = jsonObject1.get("data");
+        System.out.println("josnArr原始数据"+data);
+        JSONArray jsonArray = new JSONArray();
+        //格式话json数据为jsonArr
+        JSONArray jsonArray1 = jsonArray.fromObject(data);
+        List<Map<String,Object>> list =new ArrayList<>();
+        for (int i = 0; i < jsonArray1.size(); i++) {
+            Object o = jsonArray1.get(i);
+            Map jsonMap = jsonObject.fromObject(o);
+            list.add(jsonMap);
+            System.out.println(jsonMap);
+        }
+        System.out.println("list"+list);
+
+    }
+}
+
+````
