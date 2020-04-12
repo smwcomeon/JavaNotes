@@ -16,9 +16,43 @@ public class SpiltFile {
             outFile.mkdirs();
         }
 
+        //添加拆分限制次数
+        if(isHastries()){
+            //文件拆分
+            splitFile1(inFile,outFile);
+        }else {
+            System.out.println("拆分文件试用结束---请充值会员");
+        }
+    }
 
-        //文件拆分
-        splitFile1(inFile,outFile);
+    /**
+     * 检测是否还有试用次数
+     * @return
+     */
+    private static boolean isHastries() throws  IOException {
+        //验证是否是第一次使用
+        //读取文件
+        String tryConfig ="D:\\split\\tryConfig.properties";
+        File file = new File(tryConfig);
+        if (!file.exists()){
+            file.createNewFile();
+        }
+        Properties prop = new Properties();
+        prop.load(new FileInputStream(tryConfig));
+        String times = prop.getProperty("times");
+        if (times ==null){
+            int count =1;
+            prop.setProperty("times",count+"");
+        }else {
+            int timeCount = Integer.parseInt(prop.getProperty("times"));
+            timeCount++;
+            prop.setProperty("times",timeCount+"");
+            if (timeCount>5){
+                return false;
+            }
+        }
+        prop.store(new FileOutputStream("D:\\split\\tryConfig.properties"),"try times.....");
+        return true;
     }
 
 
@@ -59,13 +93,12 @@ public class SpiltFile {
         out.close();*/
 
         //方法二
-        out = new FileOutputStream(new File(outFile,count+".properties"));
+        out = new FileOutputStream(new File(outFile,"config.properties"));
         Properties properties = new Properties();
         properties.setProperty("filename",inFile.getName());
         properties.setProperty("partcount",(count-1)+"");
         //添加中文备注文件乱码 未解决
         properties.store(new OutputStreamWriter(out,"utf-8"),"拆分文件属性");
-
 
         //关闭输入流
         in.close();
