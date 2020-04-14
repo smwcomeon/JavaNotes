@@ -56,3 +56,21 @@ public enum Color {
 }
 
 ```
+
+### 枚举类使用
+```java
+package com.enumtt;
+
+public class ColorEnum {
+    public static void main(String[] args) {
+        //枚举类的使用
+        Color red = Color.RED;
+//        red.setColor("hh");
+//        String color = red.getColor();
+//        int index = red.getIndex();
+//        System.out.println(color+"---"+index);
+        System.out.println(Color.getValue("1"));
+    }
+}
+
+```
