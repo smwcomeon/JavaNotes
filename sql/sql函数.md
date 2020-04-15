@@ -1,6 +1,6 @@
 **[where choose](#choose)
 
-## 1 **IF**函数
+## IF函数
 
 ```text
 IF(expr1,expr2,expr3)
@@ -57,4 +57,28 @@ end
           </otherwise>
      </choose> > 
    </where>
+```
+## UNIX_TIMESTAMP--时间格式转换
+```text
+mysql的UNIX_TIMESTAMP用法
+一、UNIX_TIMESTAMP 一般是用于unix的时间戳。
+例子一、日期转化为时间戳
+SELECT UNIX_TIMESTAMP("2016-07-11")
+结果：
+-- 1468166400
+
+例子二、日期转化为时间戳
+
+SELECT UNIX_TIMESTAMP("2016-07-17 23:59:59")
+结果：
+
+-- 1468771199
+
+二、FROM_UNIXTIME：表示把UNIX_TIMESTAMP还原成标准的时间格式
+
+SELECT FROM_UNIXTIME(1468166400),FROM_UNIXTIME(1468771199)
+结果：
+
+2016-07-11 00:00:00	2016-07-17 23:59:59
+
 ```
