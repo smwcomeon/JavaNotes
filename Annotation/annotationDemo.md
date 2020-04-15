@@ -1,3 +1,34 @@
+## 自定义注解的使用规范
+
+a.@Target  自定义注解可以标注的位置
+
+```txt
+取值(ElementType)有：
+　　　　1.CONSTRUCTOR:用于描述构造器
+　　　　2.FIELD:用于描述域
+　　　　3.LOCAL_VARIABLE:用于描述局部变量
+　　　　4.METHOD:用于描述方法
+　　　　5.PACKAGE:用于描述包
+　　　　6.PARAMETER:用于描述参数
+　　　　7.TYPE:用于描述类、接口(包括注解类型) 或enum声明
+```
+b.@Retention 生命状态
+
+```txt
+取值（RetentionPoicy）有：
+
+　　　　1.SOURCE:在源文件中有效（即源文件保留）
+　　　　2.CLASS:在class文件中有效（即class保留）
+　　　　3.RUNTIME:在运行时有效（即运行时保留）
+```
+c.@Documented 是否生成文本
+
+```txt
+Documented用于描述其它类型的annotation应该被作为被标注的程序成员的公共API，因此可以被例如javadoc此类的工具文档化。Documented是一个标记注解，没有成员。
+```
+d.@Inherited
+
+
 ## 1.1自定义注解示范
 ```java
 package com.annotation;
