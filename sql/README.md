@@ -10,4 +10,12 @@
 
 5、[映射器（mappers）](https://github.com/smwcomeon/JavaNotes/blob/master/sql/Mybatis.md#%E6%98%A0%E5%B0%84%E5%99%A8mappers)
 
-6、[]()
+6、[动态sql](https://mybatis.org/mybatis-3/zh/dynamic-sql.html)
+
+7、[]()
+
+8、[]()
+
+9、[]()
+
+10、[]()
