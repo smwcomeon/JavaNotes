@@ -8,6 +8,6 @@
 
 4、[类型别名（typeAliases）](https://github.com/smwcomeon/JavaNotes/blob/master/sql/Mybatis.md#%E7%B1%BB%E5%9E%8B%E5%88%AB%E5%90%8Dtypealiases)
 
-5、[映射器（mappers）]()
+5、[映射器（mappers）](https://github.com/smwcomeon/JavaNotes/blob/master/sql/Mybatis.md#%E6%98%A0%E5%B0%84%E5%99%A8mappers)
 
 6、[]()
