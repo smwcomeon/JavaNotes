@@ -27,3 +27,48 @@ public class Author {
     ...
 }
 ```
+
+## 映射器（mappers）
+
+```text
+既然 MyBatis 的行为已经由上述元素配置完了，我们现在就要来定义 SQL 映射语句了。 但首先，我们需要告诉 MyBatis 到哪里去找到这些语句。 在自动查找资源方面，Java 并没有提供一个很好的解决方案，所以最好的办法是直接告诉 MyBatis 到哪里去找映射文件。 你可以使用相对于类路径的资源引用，或完全限定资源定位符（包括 file:/// 形式的 URL），或类名和包名等。例如：
+```
+
+<!-- 使用相对于类路径的资源引用 -->
+
+```xml
+<mappers>
+  <mapper resource="org/mybatis/builder/AuthorMapper.xml"/>
+  <mapper resource="org/mybatis/builder/BlogMapper.xml"/>
+  <mapper resource="org/mybatis/builder/PostMapper.xml"/>
+</mappers>
+```
+
+<!-- 使用完全限定资源定位符（URL） -->
+
+```xml
+<mappers>
+  <mapper url="file:///var/mappers/AuthorMapper.xml"/>
+  <mapper url="file:///var/mappers/BlogMapper.xml"/>
+  <mapper url="file:///var/mappers/PostMapper.xml"/>
+</mappers>
+```
+
+<!-- 使用映射器接口实现类的完全限定类名 -->
+
+```xml
+<mappers>
+  <mapper class="org.mybatis.builder.AuthorMapper"/>
+  <mapper class="org.mybatis.builder.BlogMapper"/>
+  <mapper class="org.mybatis.builder.PostMapper"/>
+</mappers>
+```
+
+<!-- 将包内的映射器接口实现全部注册为映射器 -->
+
+```xml
+<mappers>
+  <package name="org.mybatis.builder"/>
+</mappers>
+
+```
