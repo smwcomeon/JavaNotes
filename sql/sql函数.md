@@ -82,3 +82,12 @@ SELECT FROM_UNIXTIME(1468166400),FROM_UNIXTIME(1468771199)
 2016-07-11 00:00:00	2016-07-17 23:59:59
 
 ```
+
+## GROUP_CONCAT合并函数 
+
+```
+同一字段连接使用 但必须跟group by 连用
+
+例：select id ,name,GROUP_CONCAT(skill_quece_id) as skills form tableName group by provId
+[网页实例](https://blog.csdn.net/qq_35531549/article/details/90383022)
+```
