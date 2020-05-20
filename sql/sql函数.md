@@ -89,5 +89,6 @@ SELECT FROM_UNIXTIME(1468166400),FROM_UNIXTIME(1468771199)
 同一字段连接使用 但必须跟group by 连用
 
 例：select id ,name,GROUP_CONCAT(skill_quece_id) as skills form tableName group by provId
-[网页实例](https://blog.csdn.net/qq_35531549/article/details/90383022)
+
 ```
+[网页实例](https://blog.csdn.net/qq_35531549/article/details/90383022)
