@@ -14,7 +14,7 @@
 
 7、[GROUP_CONCAT](https://github.com/smwcomeon/JavaNotes/blob/master/sql/sql%E5%87%BD%E6%95%B0.md#group_concat%E5%90%88%E5%B9%B6%E5%87%BD%E6%95%B0)
 
-8、[]()
+8、[SUBSTRING_INDEX(str,delim,count)](https://github.com/smwcomeon/JavaNotes/blob/master/sql/sql%E5%87%BD%E6%95%B0.md#substring_indexstrdelimcount)
 
 9、[]()
 
