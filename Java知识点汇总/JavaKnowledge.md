@@ -26,8 +26,8 @@ public class KafkaProduceUtil{
     }
 }
 
+```
+
 参考网址
 (@Value注解为什么不能直接为静态变量赋值)[https://blog.csdn.net/qq_27127145/article/details/88863702]
 
-
-```
