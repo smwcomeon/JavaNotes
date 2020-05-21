@@ -92,3 +92,16 @@ SELECT FROM_UNIXTIME(1468166400),FROM_UNIXTIME(1468771199)
 
 ```
 [网页实例](https://blog.csdn.net/qq_35531549/article/details/90383022)
+
+## SUBSTRING_INDEX(str,delim,count)
+
+MYSQL→mysql中字符串截取的处理？  
+SUBSTRING_INDEX(str,delim,count)的用法？
+
+str:要做处理的字符串对象。
+delim:处理时用来做标识符的东西。
+count:怎么取值。
+count是正值：顺着数，标识符第count次出现时在它前面的所有的数据。
+count是负值：倒着数，标识符第count次出现时在它后面的所有的数据。
+
+[网站示例](https://www.cnblogs.com/yaoxiaoxing/p/5408003.html)
