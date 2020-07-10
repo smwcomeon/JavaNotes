@@ -103,5 +103,7 @@ OK
 
 > zcount myzset 1 3                             #获取指定区间个数
 3
+```
 
-```bash
+
+
