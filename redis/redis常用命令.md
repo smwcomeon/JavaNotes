@@ -55,8 +55,7 @@ OK
 (integer) 0
 > hsetnx map key11 v
 (integer) 1
-
-```bash
+```
 
 ## Zset
 在set的基础上加一个zhi set key value ;Zset key score value
@@ -104,6 +103,5 @@ OK
 
 > zcount myzset 1 3                             #获取指定区间个数
 3
-
 
 ```bash
