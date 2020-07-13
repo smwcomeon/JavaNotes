@@ -1,5 +1,17 @@
 [狂神redis学习笔记](https://www.jianshu.com/p/ded098a2d29a)
 
+[1、Redis-Key](https://github.com/smwcomeon/JavaNotes/blob/master/redis/redis%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4.md#redis-key)
+
+[String（字符串）](https://github.com/smwcomeon/JavaNotes/blob/master/redis/redis%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4.md#string%E5%AD%97%E7%AC%A6%E4%B8%B2)
+
+[List（列表）](https://github.com/smwcomeon/JavaNotes/blob/master/redis/redis%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4.md#list%E5%88%97%E8%A1%A8)
+
+[Hash类型](https://github.com/smwcomeon/JavaNotes/blob/master/redis/redis%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4.md#hash%E7%B1%BB%E5%9E%8B)
+
+[Set（集合）](https://github.com/smwcomeon/JavaNotes/blob/master/redis/redis%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4.md#set%E9%9B%86%E5%90%88)
+
+[Zset](https://github.com/smwcomeon/JavaNotes/blob/master/redis/redis%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4.md#zset)
+
 ## Redis-Key
 ```
 127 .0.0.1:6379> keys *                             # 查看所有的key
