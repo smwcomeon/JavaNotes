@@ -30,6 +30,131 @@ public class TestStreamApi {
             new Employer("赵六",10,6666.66, Employer.Status.BUSY),
             new Employer("田七",36,123456.77, Employer.Status.FREE)
     );
+    
+      /**
+     * 收集
+     *  collection 将流转换为其他形式。接受一个Collector接口的实现，用于Stream中元素做汇总的方法
+     */
+    @Test
+    public void collectionTest(){
+        //流数据处理转list集合
+        List<String> collect = employers.stream()
+                .map(Employer::getName)
+                .collect(Collectors.toList());
+        collect.forEach(System.out::println);
+
+        System.out.println("===================");
+
+        employers.stream()
+                .map(Employer::getName)  //获取名字
+                .collect(Collectors.toSet())  //转set集合
+                .forEach(System.out::println); //打印
+
+        //通过toCollection转指定的集合
+        HashSet<String> toCollection = employers.stream()
+                .map(Employer::getName)
+                .collect(Collectors.toCollection(HashSet::new));
+        toCollection.forEach(System.out::println);
+
+        //总和
+        Double summingDouble = employers.stream().collect(Collectors.summingDouble(Employer::getSalry));
+        System.out.println("summingDouble=="+summingDouble);
+        //计数
+        Long counting = employers.stream().collect(Collectors.counting());
+        System.out.println("counting=="+counting);
+
+        //平均值
+        Double averagingDouble = employers.stream().collect(Collectors.averagingDouble(Employer::getSalry));
+        System.out.println("averagingDouble=="+averagingDouble);
+
+        //最大值
+        Optional<Employer> maxBy = employers.stream()
+                .collect(Collectors.maxBy((e1, e2) -> Double.compare(e1.getSalry(), e2.getSalry())));
+        System.out.println("maxBy=="+maxBy.get());
+
+        //最小值
+        Optional<Double> minBy = employers.stream()
+                .map(Employer::getSalry)
+                .collect(Collectors.minBy(Double::compareTo));
+        System.out.println("minBy=="+minBy);
+
+        //summarizingDouble
+        DoubleSummaryStatistics collect1 = employers.stream().collect(Collectors.summarizingDouble(Employer::getSalry));
+        System.out.println(collect1.getSum());
+        System.out.println(collect1.getMax());
+        System.out.println(collect1.getAverage());
+    }
+
+    /**
+     * 分区
+     */
+    @Test
+    public void partitionTest(){
+        Map<Boolean, List<Employer>> collect = employers.stream()
+                .collect(Collectors.partitioningBy(e -> e.getSalry() > 8000));
+        System.out.println(collect);
+    }
+
+    /**
+     * 分组
+     */
+    @Test
+    public void groupTest(){
+        //按员工状态分组
+        Map<Employer.Status, List<Employer>> collect = employers.stream()
+                .collect(Collectors.groupingBy(Employer::getStatus));
+        System.out.println(collect);
+
+        //多级分组
+        Map<Employer.Status, Map<String, List<Employer>>> collect1 = employers.stream()
+                .collect(Collectors.groupingBy(Employer::getStatus, Collectors.groupingBy(e -> {
+                    if (e.getAge() <= 35) {
+                        return "青年";
+                    } else if (e.getAge() <= 50) {
+                        return "中年";
+                    } else {
+                        return "老年";
+                    }
+                })));
+        System.out.println(collect1);
+    }
+
+    /**
+     * 拼接
+     */
+    @Test
+    public void joinTest(){
+        String joining = employers.stream()
+                .map(Employer::getName)
+                .collect(Collectors.joining(","));
+        System.out.println("joining=="+joining);
+
+        String joining2 = employers.stream()
+                .map(Employer::getName)
+                .collect(Collectors.joining(",","头部==","===尾部"));
+        System.out.println("joining2==  "+joining2);
+    }
+
+    /**
+     * 归约
+     * reduce（T identity，BinaryOpertor）/reduce(BinaryOperator)  可以将流中元素反复结合起来，得到一个值
+     */
+    @Test
+    public  void reduceTest(){
+        List<Integer> list = Arrays.asList(1,2,3,4,5,6,7,8,9,10);
+
+        Integer sum = list.stream()
+                .reduce(0,(x,y)->x+y);//计算递归 0 +1 +3 。。。
+        System.out.println(sum);
+
+        System.out.println("====================");
+        Optional<Double> sum2 = employers.stream()
+                .map(Employer::getSalry)
+                .reduce(Double::sum);
+        Double aDouble = sum2.get();
+        System.out.println(String.format("%.2f",aDouble));
+
+    }
 
     /**
      * 终止操作
