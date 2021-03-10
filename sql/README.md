@@ -16,6 +16,6 @@
 
 8、[SUBSTRING_INDEX(str,delim,count)](https://github.com/smwcomeon/JavaNotes/blob/master/sql/sql%E5%87%BD%E6%95%B0.md#substring_indexstrdelimcount)
 
-9、[]()
+9、[15 个 MyBatis 技巧](https://github.com/smwcomeon/JavaNotes/blob/master/sql/15%E4%B8%AAMyBatis%20%E6%8A%80%E5%B7%A7.md#15-%E4%B8%AA-mybatis-%E6%8A%80%E5%B7%A7)
 
 10、[]()
