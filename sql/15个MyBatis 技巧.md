@@ -1,7 +1,7 @@
 
 ## 15 个 MyBatis 技巧
 
-引用地址https://www.toutiao.com/i6937090947977134604/?tt_from=weixin&utm_campaign=client_share&wxshare_count=1&timestamp=1615337072&app=news_article&utm_source=weixin&utm_medium=toutiao_ios&use_new_style=1&req_id=20210310084432010150220075231E3B98&share_token=C38F1FE3-76A6-4DA7-AD8A-5497BA7C31C2&group_id=6937090947977134604
+[引用地址](https://www.toutiao.com/i6937090947977134604/?tt_from=weixin&utm_campaign=client_share&wxshare_count=1&timestamp=1615337072&app=news_article&utm_source=weixin&utm_medium=toutiao_ios&use_new_style=1&req_id=20210310084432010150220075231E3B98&share_token=C38F1FE3-76A6-4DA7-AD8A-5497BA7C31C2&group_id=6937090947977134604)
 
 ** 模糊查询 ** 
 
